@@ -26,7 +26,7 @@ class Indicator @JvmOverloads constructor(context: Context, attrs: AttributeSet?
         unselectedIndicatorColor = context.resources.getColor(R.color.grey)
         indicatorGravity = Gravity.CENTER_HORIZONTAL
     }
-    
+
     fun attachToRecyclerView(recyclerView:RecyclerView,indicatorItem: IndicatorItem = defaulIndicatorItem()){
 
         var recylerViewItemCount = recyclerView.adapter?.itemCount?:0
@@ -39,7 +39,7 @@ class Indicator @JvmOverloads constructor(context: Context, attrs: AttributeSet?
 
         selectedIndicatorColor = indicatorItem.selectedIndicatorColor
         unselectedIndicatorColor = indicatorItem.unselectedIndicatorColor
-        this.gravity = indicatorGravity
+        this.gravity = indicatorItem.indicatorGravity
 
 
         setSelectedIndicator(0)
