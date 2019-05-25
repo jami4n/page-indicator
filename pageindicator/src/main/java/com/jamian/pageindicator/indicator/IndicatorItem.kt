@@ -3,6 +3,7 @@ package com.example.indicator.indicator
 import android.content.Context
 import android.graphics.drawable.GradientDrawable
 import android.util.AttributeSet
+import android.view.Gravity
 import android.view.View
 import android.widget.LinearLayout
 import com.jamian.pageindicator.R
@@ -14,8 +15,9 @@ class IndicatorItem @JvmOverloads constructor(context: Context, attrs: Attribute
         val FULL_WIDTH = LinearLayout.LayoutParams.MATCH_PARENT
     }
 
-    var selectedIndicatorColor = 0
-    var unselectedIndicatorColor = 0
+    var selectedIndicatorColor = -1
+    var unselectedIndicatorColor = -1
+    var indicatorGravity = -1
 
     fun copy():IndicatorItem{
         var indicatorItem = IndicatorItem.Builder(this.context,
@@ -35,10 +37,12 @@ class IndicatorItem @JvmOverloads constructor(context: Context, attrs: Attribute
         var unselectedIndicatorColor = -1
         var circleRadius:Int = -1
         var cornerRadius:Int = -1
+        var indicatorGravity = -1
 
         init {
             selectedIndicatorColor = context.resources.getColor(R.color.colorPrimary)
             unselectedIndicatorColor = context.resources.getColor(R.color.grey)
+            indicatorGravity = Gravity.CENTER_HORIZONTAL
         }
 
         fun setIndicatorItemHeight(indicatorItemHeight:Int) = apply { this.indicatorItemHeight = indicatorItemHeight}
@@ -47,10 +51,10 @@ class IndicatorItem @JvmOverloads constructor(context: Context, attrs: Attribute
         fun setIndicatorAsCircle(circleRadius:Int) = apply { this.circleRadius = circleRadius }
         fun setCorners(cornerRadius:Int) = apply { this.cornerRadius = cornerRadius }
 
+        fun setGravity(indicatorGravity:Int) = apply { this.indicatorGravity = indicatorGravity }
         fun setIndicatorColors(selectedIndicatorColor: Int,unselectedIndicatorColor: Int) = apply {
             this.selectedIndicatorColor = selectedIndicatorColor
-            this.unselectedIndicatorColor = unselectedIndicatorColor
-        }
+            this.unselectedIndicatorColor = unselectedIndicatorColor }
 
         fun build():IndicatorItem{
             var item = IndicatorItem(context)
@@ -81,6 +85,7 @@ class IndicatorItem @JvmOverloads constructor(context: Context, attrs: Attribute
 
             item.selectedIndicatorColor = selectedIndicatorColor
             item.unselectedIndicatorColor = unselectedIndicatorColor
+            item.indicatorGravity = indicatorGravity
 
             return item
         }

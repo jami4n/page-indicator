@@ -26,14 +26,6 @@ class Indicator @JvmOverloads constructor(context: Context, attrs: AttributeSet?
         selectedIndicatorColor = context.resources.getColor(R.color.colorAccent)
         unselectedIndicatorColor = context.resources.getColor(R.color.grey)
     }
-/*
-    fun selectedIndicatorColor(selectedIndicatorColor:Int){
-        this.selectedIndicatorColor = selectedIndicatorColor
-    }
-
-    fun unselectedIndicatorColor(unselectedIndicatorColor:Int){
-        this.unselectedIndicatorColor = unselectedIndicatorColor
-    }*/
 
     fun attachToRecyclerView(recyclerView:RecyclerView,indicatorItem: IndicatorItem = defaulIndicatorItem()){
 
@@ -100,25 +92,4 @@ class Indicator @JvmOverloads constructor(context: Context, attrs: AttributeSet?
         lastKnownPosition = newPosition
 
     }
-
-    /*private fun createIndicatorItem():View{
-
-        var view = View(context)
-        view.background = context.resources.getDrawable(R.drawable.grey_indicator)
-
-        var params = LayoutParams(20, 4)
-
-        if(itemWidth == LayoutParams.MATCH_PARENT)
-            params = LayoutParams(itemWidth, 8,1.0f)
-        else
-            params = LayoutParams(itemWidth, 8)
-
-        var margin:Int = 2
-        params.setMargins(margin,margin,margin,margin)
-        view.layoutParams = params
-
-        return view
-    }*/
-
-
 }

@@ -16,23 +16,17 @@ import com.jamian.pageindicator.R
 class Indicator @JvmOverloads constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0) : LinearLayout(context, attrs, defStyleAttr) {
 
 
-    var lastKnownPosition = 0
-    internal var selectedIndicatorColor = 0
-    internal var unselectedIndicatorColor = 0
+    private var lastKnownPosition = -1
+    private var selectedIndicatorColor = -1
+    private var unselectedIndicatorColor = -1
+    private var indicatorGravity = -1
 
     init {
         selectedIndicatorColor = context.resources.getColor(R.color.salmon)
         unselectedIndicatorColor = context.resources.getColor(R.color.grey)
+        indicatorGravity = Gravity.CENTER_HORIZONTAL
     }
-/*
-    fun selectedIndicatorColor(selectedIndicatorColor:Int){
-        this.selectedIndicatorColor = selectedIndicatorColor
-    }
-
-    fun unselectedIndicatorColor(unselectedIndicatorColor:Int){
-        this.unselectedIndicatorColor = unselectedIndicatorColor
-    }*/
-
+    
     fun attachToRecyclerView(recyclerView:RecyclerView,indicatorItem: IndicatorItem = defaulIndicatorItem()){
 
         var recylerViewItemCount = recyclerView.adapter?.itemCount?:0
@@ -45,9 +39,10 @@ class Indicator @JvmOverloads constructor(context: Context, attrs: AttributeSet?
 
         selectedIndicatorColor = indicatorItem.selectedIndicatorColor
         unselectedIndicatorColor = indicatorItem.unselectedIndicatorColor
+        this.gravity = indicatorGravity
+
 
         setSelectedIndicator(0)
-
 
         recyclerView.addOnScrollListener(object : RecyclerView.OnScrollListener() {
             override fun onScrollStateChanged(recyclerView: RecyclerView, newState: Int) {
@@ -94,29 +89,7 @@ class Indicator @JvmOverloads constructor(context: Context, attrs: AttributeSet?
 
         }catch (e:Exception){}
 
-
         lastKnownPosition = newPosition
 
     }
-
-    /*private fun createIndicatorItem():View{
-
-        var view = View(context)
-        view.background = context.resources.getDrawable(R.drawable.grey_indicator)
-
-        var params = LayoutParams(20, 4)
-
-        if(itemWidth == LayoutParams.MATCH_PARENT)
-            params = LayoutParams(itemWidth, 8,1.0f)
-        else
-            params = LayoutParams(itemWidth, 8)
-
-        var margin:Int = 2
-        params.setMargins(margin,margin,margin,margin)
-        view.layoutParams = params
-
-        return view
-    }*/
-
-
 }
