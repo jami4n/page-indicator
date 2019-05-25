@@ -10,6 +10,7 @@ import com.example.indicator.R
 import com.example.indicator.indicator.Indicator
 import com.example.indicator.indicator.IndicatorItem
 import com.example.indicator.indicator.IndicatorItem.Companion.FULL_WIDTH
+import com.jamian.indicator.Log
 
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -33,6 +34,8 @@ class MainActivity : AppCompatActivity() {
 
 
         indicator.attachToRecyclerView(rvBanner,indicatorItem)
+
+        Log().logthisnow("test")
 
     }
 }

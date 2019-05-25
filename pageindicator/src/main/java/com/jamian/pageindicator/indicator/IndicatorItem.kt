@@ -5,9 +5,10 @@ import android.graphics.drawable.GradientDrawable
 import android.util.AttributeSet
 import android.view.View
 import android.widget.LinearLayout
-import com.example.indicator.R
+import com.jamian.pageindicator.R
 
-class IndicatorItem @JvmOverloads constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0, defStyleRes:Int = 0):View(context, attrs, defStyleAttr, defStyleRes){  //setting up stage to build an object of IndicatorItem and returnig a view
+
+class IndicatorItem @JvmOverloads constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0):View(context, attrs, defStyleAttr){  //setting up stage to build an object of IndicatorItem and returnig a view
 
     companion object{
         val FULL_WIDTH = LinearLayout.LayoutParams.MATCH_PARENT
