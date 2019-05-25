@@ -25,7 +25,7 @@ class MainActivity : AppCompatActivity() {
         rvBanner.layoutManager = LinearLayoutManager(this,RecyclerView.HORIZONTAL,false)
         rvBanner.adapter = BannerAdapter(this,items)
         var snapHelper = PagerSnapHelper()
-        snapHelper.attachToRecyclerView(rvBanner)
+        snapHelper.attachToRecyclerView(rvBanner);
 
         var indicatorItem = IndicatorItem.
             Builder(this)
