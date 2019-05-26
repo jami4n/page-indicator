@@ -24,15 +24,9 @@ class MainActivity : AppCompatActivity() {
         var snapHelper = PagerSnapHelper()
         snapHelper.attachToRecyclerView(rvBanner);
 
-        var indicatorItem = IndicatorItem.
-            Builder(this)
-            .setIndicatorColors(resources.getColor(R.color.yellow),resources.getColor(R.color.grey))
-            .build()
+        var indicatorItem = IndicatorItem.Builder(this).build()
 
 
         indicator.attachToRecyclerView(rvBanner,indicatorItem)
-
-        Log().logthisnow("test")
-
     }
 }

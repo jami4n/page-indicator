@@ -21,11 +21,7 @@ class Indicator @JvmOverloads constructor(context: Context, attrs: AttributeSet?
     private var unselectedIndicatorColor = -1
     private var indicatorGravity = -1
 
-    init {
-        selectedIndicatorColor = context.resources.getColor(R.color.salmon)
-        unselectedIndicatorColor = context.resources.getColor(R.color.grey)
-        indicatorGravity = Gravity.CENTER_HORIZONTAL
-    }
+
 
     fun attachToRecyclerView(recyclerView:RecyclerView,indicatorItem: IndicatorItem = defaulIndicatorItem()){
 
