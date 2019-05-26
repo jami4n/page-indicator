@@ -5,11 +5,8 @@ import android.os.Bundle
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.PagerSnapHelper
 import android.support.v7.widget.RecyclerView
-import android.widget.LinearLayout
 import com.example.indicator.R
-import com.example.indicator.indicator.Indicator
 import com.example.indicator.indicator.IndicatorItem
-import com.example.indicator.indicator.IndicatorItem.Companion.FULL_WIDTH
 import com.jamian.indicator.Log
 
 import kotlinx.android.synthetic.main.activity_main.*

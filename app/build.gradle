@@ -43,4 +43,6 @@ dependencies {
     annotationProcessor 'com.github.bumptech.glide:compiler:4.9.0'
 
     implementation 'com.github.jami4n:IndicatorLibrary:0.1.0'
+
+    implementation project(':pageindicator')
 }
