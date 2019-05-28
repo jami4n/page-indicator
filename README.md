@@ -54,6 +54,9 @@ And just like that you have a lightweight page indicator ready to customise and 
 ### Examples
 ![alt text](https://github.com/jami4n/Gmail_mock/blob/master/app/src/main/res/drawable/ex1.gif)
 ![alt text](https://github.com/jami4n/Gmail_mock/blob/master/app/src/main/res/drawable/ex2.gif)
+<br/>
+* Yellow page indicator with Gravity.END and width set to 40
+* Green page indicator with width set to IndicatorItem.FULL_WIDTH
 
 
 ### Author 
