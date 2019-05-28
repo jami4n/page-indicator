@@ -51,6 +51,10 @@ indicator.attachToRecyclerView(rvBanner,indicatorItem)
 ```
 And just like that you have a lightweight page indicator ready to customise and use.
 
+### Examples
+![alt text](https://github.com/jami4n/Gmail_mock/blob/master/app/src/main/res/drawable/ex1.gif)
+![alt text](https://github.com/jami4n/Gmail_mock/blob/master/app/src/main/res/drawable/ex2.gif)
+
 
 ### Author 
 Jamian Gomes
