@@ -21,6 +21,7 @@ dependencies {
 ### Latest Version
 [![](https://jitpack.io/v/jami4n/page-indicator.svg)](https://jitpack.io/#jami4n/page-indicator)
 
+
 ### How to use
 **Add the indicator View to your xml file**
 
@@ -47,6 +48,7 @@ You can keep adding functions to the builder method and modify the indicator col
 indicator.attachToRecyclerView(rvBanner,indicatorItem)
 ```
 And just like that you have a lightweight page indicator ready to customise and use.
+
 
 ### Author 
 Jamian Gomes
