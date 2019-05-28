@@ -1,4 +1,4 @@
-# page-indicator
+# Page-indicator
 A simple and customisable Android library to indicate number of items in a recycler view.
 
 ### Installation
