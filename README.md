@@ -40,7 +40,9 @@ var indicatorItem = IndicatorItem.Builder(this)
                     .build()
 ```
 
-You can keep adding functions to the builder method and modify the indicator colors, height, width, margin, corners and  gravity. Please refer to this link to see more of these functions used.
+You can keep adding functions to the builder method and modify the indicator colors, height, width, margin, corners and  gravity. Please refer to these links to see more of these functions used.
+<br/>[MainActivity.kt](https://github.com/jami4n/page-indicator/blob/master/app/src/main/java/com/example/indicator/ui/MainActivity.kt) - the code in the MainActivity
+<br/>[activity_main.xml](https://github.com/jami4n/page-indicator/blob/master/app/src/main/res/layout/activity_main.xml) - The corresponding xml file
 
 **Attach your horizontal recyclerview to the Indicator and pass in the indicatorItem**
 
